@@ -1,0 +1,229 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ------------------------------------------------------------------header----------------------------------------- */
+header {
+    position: relative;
+    height: 50px;
+    /* position: sticky;
+    top: 20px; */
+}
+
+nav {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 50px;
+    background-color: #212121;
+
+}
+
+.menu {
+    display: flex;
+    /* размещаем наш блок в одну строчку */
+    justify-content: space-between;
+    /* распологаем наш блог равномерно по всей длине родительского блока */
+
+    padding: 13px 70px;
+    margin: 0;
+    /*  убираем кружки(точки и т.д.) у списка (т.е. будет только текст но не будет ни цифр ни букв у Ol - списков или кружков точек квадратиков у Ul- списков) */
+    list-style-type: none;
+}
+
+.menu .menu_link {
+    font-weight: 300;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu .menu_item {
+    border-right: 2px dotted black;
+    padding-right: 28px;
+}
+
+.subheader {
+    /* первый способ поднять блок (родитель header( position: relative; а блок  subheader - position: absolute(этот блок будет как бы наезжать на блок который поднимется вверх); но надо тогда ширину указать в 100% блока */
+    position: absolute;
+    width: 100%;
+    /* второй способ тут мы указыаем position: relative; и z-index - например 2 а в блоке promo z-index: 1  и поднимаем по вертикали с помощью свойства transform: translateY(-84px); но лучше первый способ*/
+    /* position: relative;
+    z-index: 2; */
+    height: 84px;
+    background: rgba(0, 0, 0, .6);
+    top: 50px;
+}
+
+.subheader .subheader_logo {
+    display: block;
+    min-width: 100%;
+    margin-top: 16px;
+}
+
+.subheader .subheader_official {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 13px;
+    opacity: 0.6;
+    color: #fff;
+}
+
+.subheader_call {
+    margin-top: 19px;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: right;
+    color: #fff;
+}
+
+.subheader_phone {
+    display: block;
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: right;
+    color: #fff;
+    line-height: 12px;
+}
+
+.subheader_btn {
+    /* мы сами вставляем */
+    margin-top: 19px;
+    border-radius: 4px;
+
+    /*свойства кнопки  */
+    width: 172px;
+    height: 46px;
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    /* а в макете было 3px solid rgba(0, 0, 0, 0.07) */
+    background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
+    /* текс внутри кнопки */
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* ----------------------------------------------header end------------------------------------------------ */
+
+/* ----------------------------------------------promo----------------------------------------------------- */
+
+.promo {
+    min-height: 800px;
+    background: url('../img/uber_bg.png') center center/cover no-repeat;
+    padding: 150px 0 135px 0;
+    /* transform: translateY(-84px);
+    z-index: 1; */
+}
+
+.promo .promo_header {
+    margin: 0;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.promo .promo_subheader {
+    margin: 0;
+    margin-top: 22px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.promo .promo_descr {
+    margin-top: 23px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+.promo .promo_btn {
+    display: block;
+    margin: 118px auto 0 auto;
+    border-radius: 4px;
+    border: none;
+    width: 259px;
+    height: 63px;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12);
+    background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+
+
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.21);
+}
+
+.reasons {
+    padding: 20px 0 65px 0;
+}
+
+.reasons .label {
+    font-weight: 300;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    color: #fff;
+    background-color: #000;
+    width: 112px;
+    height: 24px;
+    margin: 0 auto;
+}
+
+.reasons h2 {
+    margin-bottom: 0;
+    margin-top: 38px;
+    color: #222222;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.reasons .location {
+    display: flex;
+    margin-top: 35px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.reasons .reasons_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 113px;
+    height: 113px;
+    border-radius: 100%;
+    background-color: #1eacc7;
+    margin-right: 26px;
+}
+
+.reasons .reasons_text {
+    font-weight: 300;
+    font-size: 15px;
+    color: #202020;
+    width: 343px;
+}
+
+.reasons .reasons_header {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+    color: #1eacc7;
+}
